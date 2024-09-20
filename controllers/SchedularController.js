@@ -3,7 +3,7 @@ const axios = require('axios');
 
 // Your list of APIs
 const apiList = [
-  { type: 'GET', apiName: 'https://delivery.click4delivery.in/Delivery/CheckNodeSchedular' }
+  { type: 'GET', apiName: 'https://delivery.click4delivery.in/Schedular/CheckNodeSchedular' }
 
 ];
 
