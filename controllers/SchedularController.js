@@ -3,9 +3,8 @@ const axios = require('axios');
 
 // Your list of APIs
 const apiList = [
-  { type: 'GET', apiName: 'https://delivery.click4delivery.in/Delivery/FreshOrders' },
-  { type: 'POST', apiName: 'https://delivery.click4delivery.in/Delivery/DBDetails', data: { key1: 'value1', key2: 'value2' } },
-  // Add more APIs as needed
+  { type: 'GET', apiName: 'https://delivery.click4delivery.in/Delivery/CheckNodeSchedular' }
+
 ];
 
 // Track consecutive failure counts for each API
@@ -59,7 +58,7 @@ const startScheduler = (req, res) => {
     return res.status(400).json({ message: 'Scheduler is already running.' });
   }
 
-  intervalId = setInterval(callAllApis, 10000); // Call APIs every minute
+  intervalId = setInterval(callAllApis, 30000); // Call APIs every minute
   callAllApis(); // Call the APIs immediately when the scheduler starts
 
   res.status(200).json({ message: 'Scheduler started.' });
